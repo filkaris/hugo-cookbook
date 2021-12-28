@@ -5,6 +5,11 @@
         {{ $.Scratch.Set "relLink" .RelPermalink }}
         <div class="column is-one-quarter">
             <div class="card">
+	        <div class="card-image">
+		    <figure class="image">
+			<img style="border-radius: 3%; width: {{.Params.Image_width}}px; height: {{.Params.Image_height}}px" src={{ printf "%s%s" .Site.BaseURL .Params.Recipe_image }} alt="Placeholder image">
+		    </figure>
+	        </div>
                 <header class="card-header">
                     <p class="card-header-title">
                         <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
